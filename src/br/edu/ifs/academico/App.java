@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<Aluno> alunos = new ArrayList<Aluno>();
@@ -20,10 +19,9 @@ public class App {
 			switch (opcao) {
 			case 1:
 				System.out.println("cadastrar aluno");
-				Aluno aluno = new Aluno();
 				System.out.println("nome:");
 				String name = scanner.next();
-				aluno.setName(name);
+				Aluno aluno = new Aluno(name);
 				System.out.println("Data de nascimento");
 				String dataNascimento = scanner.next();
 				aluno.setDataNascimento(dataNascimento);
@@ -34,13 +32,13 @@ public class App {
 				break;
 			case 2:
 				System.out.println("listar aluno");
+					System.out.println(alunos);
 				break;
 			case 3:
 				System.out.println("cadastrar professor");
-				Professor professor = new Professor();
 				System.out.println("nome:");
 				name = scanner.next();
-				professor.setName(name);
+				Professor professor = new Professor(name);
 				System.out.println("Data de nascimento");
 				dataNascimento = scanner.next();
 				professor.setDataNascimento(dataNascimento);
@@ -51,13 +49,13 @@ public class App {
 				break;
 			case 4:
 				System.out.println("listar professor");
+				System.out.println(professores);
 				break;
 			case 5:
 				System.out.println("cadastrar pedagogo");
-				Pedagogo pedagogo = new Pedagogo();
 				System.out.println("nome:");
 				name = scanner.next();
-				pedagogo.setName(name);
+				Pedagogo pedagogo = new Pedagogo(name);
 				System.out.println("Data de nascimento");
 				dataNascimento = scanner.next();
 				pedagogo.setDataNascimento(dataNascimento);
@@ -68,13 +66,13 @@ public class App {
 				break;
 			case 6:
 				System.out.println("listar pedagogo");
+				System.out.println(pedagogos);
 				break;
 			case 7:
 				System.out.println("cadastrar psicologo");
-				Psicologo psicologo = new Psicologo();
 				System.out.println("nome:");
 				name = scanner.next();
-				psicologo.setName(name);
+				Psicologo psicologo = new Psicologo(name);
 				System.out.println("Data de nascimento");
 				dataNascimento = scanner.next();
 				psicologo.setDataNascimento(dataNascimento);
@@ -85,13 +83,13 @@ public class App {
 				break;
 			case 8:
 				System.out.println("listar psicologo");
+				System.out.println(psicologos);
 				break;
 			case 9:
 				System.out.println("cadastrar tecnico");
-				Tecnico tecnico = new Tecnico();
 				System.out.println("nome:");
 				name = scanner.next();
-				tecnico.setName(name);
+				Tecnico tecnico = new Tecnico(name);
 				System.out.println("Data de nascimento");
 				dataNascimento = scanner.next();
 				tecnico.setDataNascimento(dataNascimento);
@@ -102,13 +100,13 @@ public class App {
 				break;
 			case 10:
 				System.out.println("listar tecnico");
+				System.out.println(tecnicos);
 				break;
 			case 11:
 				System.out.println("cadastrar reitor");
-				Reitor reitor = new Reitor();
 				System.out.println("nome:");
 				name = scanner.next();
-				reitor.setName(name);
+				Reitor reitor = new Reitor(name);
 				System.out.println("Data de nascimento");
 				dataNascimento = scanner.next();
 				reitor.setDataNascimento(dataNascimento);
@@ -119,6 +117,7 @@ public class App {
 				break;
 			case 12:
 				System.out.println("listar reitor");
+				System.out.println(reitores);
 				break;
 
 			}
